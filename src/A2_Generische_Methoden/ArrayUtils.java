@@ -10,15 +10,8 @@ public class ArrayUtils {   // Utility-Klasse (eigene Hilfsklasse schreiben)
     }
 
     static <T extends Comparable<T>> T maximum(T a, T b, T c){
-        if(a.compareTo(b) >= 0) {
-            if(a.compareTo(c) >= 0) {
-                return a;
-            } else {
-                return c;
-            }
-        } else {
-            return b;
-        }
+        T maxAB = (a.compareTo(b) >= 0) ? a : b;    // Maximum aus a und b
+        return (maxAB.compareTo(c) >= 0) ? maxAB : c; // Maximum aus max(a,b) und c -> return
     }
 
 }
