@@ -22,7 +22,7 @@ public class MethodenDemo {
         System.out.println();
 
         // Rufen Sie maximum mit drei Integer-Werten auf und geben Sie das Ergebnis aus:
-        System.out.println(ArrayUtils.maximum(10,12,299));  // klappt wegen Auto-Boxing & Auto-Unboxing
+        System.out.println(ArrayUtils.maximum(10,12,299));  // klappt wegen Auto-Boxing
 
         // Rufen Sie analysiere je einmal mit einem Integer-, einem Double- und einem
         // Float-Wert auf und beobachten Sie die Ausgabe:
