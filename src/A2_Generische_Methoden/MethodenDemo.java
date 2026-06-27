@@ -26,7 +26,7 @@ public class MethodenDemo {
 
         // Rufen Sie analysiere je einmal mit einem Integer-, einem Double- und einem
         // Float-Wert auf und beobachten Sie die Ausgabe:
-        ZahlAnalyse.analysiereZahl(15);
+        ZahlAnalyse.analysiereZahl(15); 
         ZahlAnalyse.analysiereZahl(15.00);
         ZahlAnalyse.analysiereZahl(15.00f);
     }
