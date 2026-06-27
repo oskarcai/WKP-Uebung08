@@ -31,3 +31,4 @@ public class MethodenDemo {
         ZahlAnalyse.analysiereZahl(15.00f);
     }
 }
+
