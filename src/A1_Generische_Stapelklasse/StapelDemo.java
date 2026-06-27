@@ -36,7 +36,7 @@ public class StapelDemo {
             – WarumführtZahlStapel<String> zu einem Compilerfehler, ZahlStapel<Integer> jedoch nicht?
             – Welchen Vorteil bietet die Einschränkung <T extends Number> gegenüber
                 der direkten Verwendung von Number als Parametertyp–
-                also etwa void ablegen(Number element)
+                also etwa: void ablegen(Number element)
 
 
             -> ZahlStapel<String> führt im Gegensatz zu ZahlStapel<Integer> bereits zu einem Compilerfehler,
@@ -52,8 +52,12 @@ public class StapelDemo {
                 können wir mit der Methode zwar immer noch Integer-Objekte (aufgrund Subtyppolymorphie)
                 im ZahlStapel ablegen, aber auch alle anderen Objekttypen, die von Number erben (z.B. Double-Objekte).
                 Damit wäre Typsicherheit nicht mehr zwingend garantiert.
-                Zudem wären die dynamischen Objekttypen zur Laufzeit zwar ggf. Integer-Objekte,
-                hätten aber als Referenztyp immer noch Number.
+                Zudem wären die dynamischen Objekttypen zur Laufzeit zwar ggf. Integer-Objekte (aber nicht mal das ist garantiert),
+                der Referenztyp wäre aber immer noch Number.
+                Somit könnte man beliebige Subtypen von Number in den ZahlStapel einfügen (Compiler meckert nicht, denn Subtyppolymorphie),
+                aber beim Herausnehmen würde zur Laufzeit ein Fehler passieren, wenn der Typ nicht passt (oder jedes Mal halt explizit casten, was unnötig komplizert ist).
+                --> Generics schützen also nicht nur beim Hineinlegen, sondern garantieren auch
+                    den korrekten Rückgabetyp beim Herausnehmen – das ist mindestens genauso wichtig!!
          */
 
     }
