@@ -9,7 +9,7 @@ public class Stapel<T> {        // Generische Klasse
     // * void ablegen(T element): Legt element oben auf den Stapel
     // (d.h. am Ende der internen Liste).
     void ablegen(T element) {
-        elemente.add(elemente.size(), element);
+        elemente.add(element);  // fügt Element am Ende der Liste als letztes Element ein
     }
 
     // * T entnehmen(): Entfernt das oberste Element und gibt es zurück.
