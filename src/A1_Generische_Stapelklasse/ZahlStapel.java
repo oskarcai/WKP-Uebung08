@@ -11,7 +11,7 @@ public class ZahlStapel<T extends Number> extends Stapel<T> {
         }
         return sum;
     }
-
+    
     // Implementieren Sie die Methode double durchschnitt(): Gibt den Durchschnittswert
     // aller Elemente zurück. Sie dürfen davon ausgehen, dass der Stapel nicht leer ist.
     double durchschnitt() {
